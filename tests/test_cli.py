@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from nmapy.cli import main
+from xnmapy.cli import main
 
 
 class TestCLI:
@@ -8,13 +8,13 @@ class TestCLI:
         runner = CliRunner()
         result = runner.invoke(main, ["-V"])
         assert result.exit_code == 0
-        assert "Nmapy version 0.1.0" in result.output
+        assert "Xnmapy version 0.1.0" in result.output
 
     def test_help_flag(self) -> None:
         runner = CliRunner()
         result = runner.invoke(main, ["-h"])
         assert result.exit_code == 0
-        assert "Nmapy" in result.output
+        assert "Xnmapy" in result.output
 
     def test_iflist_flag(self) -> None:
         runner = CliRunner()

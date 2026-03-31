@@ -1,4 +1,4 @@
-from nmapy.cli import main as cli_main
+from xnmapy.cli import main as cli_main
 
 
 def main() -> int:

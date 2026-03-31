@@ -9,5 +9,5 @@ __all__ = [
     "PortParser",
 ]
 
-from nmapy._core import HostInfo, NmapScan, PortInfo, ScanOptions, ScanResult
-from nmapy.parsers import PortParser, TargetParser
+from xnmapy._core import HostInfo, NmapScan, PortInfo, ScanOptions, ScanResult
+from xnmapy.parsers import PortParser, TargetParser

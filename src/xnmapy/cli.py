@@ -1,6 +1,6 @@
 import click
 
-from nmapy._core import NmapScan, ScanOptions
+from xnmapy._core import NmapScan, ScanOptions
 
 
 @click.command(
@@ -330,9 +330,9 @@ def main(
     help: bool,
     help2: bool,
 ) -> int:
-    """Nmapy - Network Mapper Clone"""
+    """Xnmapy - Network Mapper Clone"""
     if version:
-        click.echo("Nmapy version 0.1.0")
+        click.echo("Xnmapy version 0.1.0")
         return 0
     if help or help2:
         print_help()
@@ -520,12 +520,12 @@ def iflist_func(iflist: bool) -> None:
 
 
 def print_help() -> None:
-    click.echo("""Nmapy - Network Mapper Clone
-Usage: nmapy [Scan Type(s)] [Options] {target specification}
+    click.echo("""Xnmapy - Network Mapper Clone
+Usage: xnmapy [Scan Type(s)] [Options] {target specification}
 
 TARGET SPECIFICATION:
   Can pass hostnames, IP addresses, networks, etc.
-  Ex: scanme.nmapy.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
+  Ex: scanme.xnmapy.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
   -iL <inputfilename>: Input from list of hosts/networks
   -iR <num hosts>: Choose random targets
   --exclude <host1[,host2][,host3],...>: Exclude hosts/networks
@@ -604,6 +604,6 @@ MISC:
   -h: Print help
 
 EXAMPLES:
-  nmapy -v -A scanme.nmapy.org
-  nmapy -v -sn 192.168.0.0/16
-  nmapy -v -iR 10000 -Pn -p 80""")
+  xnmapy -v -A scanme.xnmapy.org
+  xnmapy -v -sn 192.168.0.0/16
+  xnmapy -v -iR 10000 -Pn -p 80""")

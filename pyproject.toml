@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nmapy"
+name = "xnmapy"
 version = "0.1.0"
 description = "A Python CLI tool that mimics the Nmap network scanning utility"
 readme = "README.md"
@@ -33,21 +33,21 @@ lint = [
     "mypy",
 ]
 cli = ["click>=8.0"]
-all = ["nmapy[dev,test,lint,cli]"]
+all = ["xnmapy[dev,test,lint,cli]"]
 
 [project.scripts]
-nmapy = "nmapy.__main__:main"
+xnmapy = "xnmapy.__main__:main"
 
 [project.urls]
-Homepage = "https://github.com/daedalus/nmapy"
-Repository = "https://github.com/daedalus/nmapy"
-Issues = "https://github.com/daedalus/nmapy/issues"
+Homepage = "https://github.com/daedalus/xnmapy"
+Repository = "https://github.com/daedalus/xnmapy"
+Issues = "https://github.com/daedalus/xnmapy/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/nmapy"]
+packages = ["src/xnmapy"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src/nmapy"]
+include = ["src/xnmapy"]
 
 [tool.ruff]
 line-length = 88

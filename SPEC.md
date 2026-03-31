@@ -1,13 +1,13 @@
-# SPEC.md — nmapy
+# SPEC.md — xnmapy
 
 ## Purpose
 
-Nmapy is a Python CLI tool that mimics the Nmap (Network Mapper) network scanning utility. It provides network host discovery, port scanning, service detection, OS detection, and script scanning capabilities through a command-line interface compatible with Nmap's usage pattern.
+Xnmapy is a Python CLI tool that mimics the Nmap (Network Mapper) network scanning utility. It provides network host discovery, port scanning, service detection, OS detection, and script scanning capabilities through a command-line interface compatible with Nmap's usage pattern.
 
 ## Scope
 
 ### In Scope
-- CLI argument parser supporting all Nmap-style options from nmapy.txt
+- CLI argument parser supporting all Nmap-style options from xnmapy.txt
 - Target specification parser (hostnames, IP addresses, CIDR notation, ranges)
 - Host discovery modes (ping scan, list scan, various discovery probes)
 - Port scanning techniques (TCP SYN, Connect, ACK, Window, Maimon, UDP, Null, FIN, Xmas, SCTP, IP Protocol)
@@ -31,7 +31,7 @@ Nmapy is a Python CLI tool that mimics the Nmap (Network Mapper) network scannin
 
 **Command Line:**
 ```
-nmapy [Scan Type(s)] [Options] {target specification}
+xnmapy [Scan Type(s)] [Options] {target specification}
 ```
 
 **Core Options:**
@@ -144,13 +144,13 @@ nmapy [Scan Type(s)] [Options] {target specification}
 ### Python API
 
 ```python
-from nmapy import parse_args, NmapScan, ScanResult
+from xnmapy import NmapScan, ScanResult
 
-# Parse command-line arguments
-args = parse_args(["-sS", "-p", "80", "192.168.1.1"])
+# Create scan options
+options = ScanOptions(targets=["192.168.1.1"], ports="80", scan_type="SYN")
 
 # Create and execute scan
-scan = NmapScan(args)
+scan = NmapScan(options)
 result: ScanResult = scan.run()
 
 # Access results
@@ -161,7 +161,7 @@ print(result.ports)
 ## Data Formats
 
 ### Target Specification
-- Hostnames: `scanme.nmapy.org`
+- Hostnames: `scanme.xnmapy.org`
 - IP addresses: `192.168.0.1`
 - CIDR notation: `192.168.0.0/24`
 - IP ranges: `192.168.0.1-254`

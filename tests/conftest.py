@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture
 def sample_targets() -> list[str]:
-    return ["192.168.1.1", "10.0.0.1", "scanme.nmapy.org"]
+    return ["192.168.1.1", "10.0.0.1", "scanme.xnmapy.org"]
 
 
 @pytest.fixture

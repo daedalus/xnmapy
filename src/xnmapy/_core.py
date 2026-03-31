@@ -162,7 +162,7 @@ class NmapScan:
     def _parse_ports(self) -> list[PortInfo]:
         if not self.options.ports:
             return []
-        from nmapy.parsers import PortParser
+        from xnmapy.parsers import PortParser
 
         parser = PortParser()
         port_dicts = parser.parse(self.options.ports)

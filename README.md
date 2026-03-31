@@ -1,21 +1,21 @@
-# Nmapy
+# Xnmapy
 
 > A Python CLI tool that mimics the Nmap network scanning utility.
 
-[![PyPI](https://img.shields.io/pypi/v/nmapy.svg)](https://pypi.org/project/nmapy/)
-[![Python](https://img.shields.io/pypi/pyversions/nmapy.svg)](https://pypi.org/project/nmapy/)
+[![PyPI](https://img.shields.io/pypi/v/xnmapy.svg)](https://pypi.org/project/xnmapy/)
+[![Python](https://img.shields.io/pypi/pyversions/xnmapy.svg)](https://pypi.org/project/xnmapy/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 ## Install
 
 ```bash
-pip install nmapy
+pip install xnmapy
 ```
 
 ## Usage
 
 ```python
-from nmapy import NmapScan, ScanOptions
+from xnmapy import NmapScan, ScanOptions
 
 options = ScanOptions(
     targets=["192.168.1.1"],
@@ -31,16 +31,16 @@ print(result.ports)
 ## CLI
 
 ```bash
-nmapy --help
-nmapy -sS -p 80 192.168.1.1
-nmapy -v -A scanme.nmapy.org
+xnmapy --help
+xnmapy -sS -p 80 192.168.1.1
+xnmapy -v -A scanme.xnmapy.org
 ```
 
 ## Development
 
 ```bash
-git clone https://github.com/daedalus/nmapy.git
-cd nmapy
+git clone https://github.com/daedalus/xnmapy.git
+cd xnmapy
 pip install -e ".[test]"
 
 # run tests

@@ -8,4 +8,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[0.1.0]: https://github.com/daedalus/nmapy/releases/tag/v0.1.0
+[0.1.0]: https://github.com/daedalus/xnmapy/releases/tag/v0.1.0

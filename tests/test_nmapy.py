@@ -1,5 +1,5 @@
-from nmapy._core import NmapScan, ScanOptions
-from nmapy.parsers import PortParser, TargetParser
+from xnmapy._core import NmapScan, ScanOptions
+from xnmapy.parsers import PortParser, TargetParser
 
 
 class TestTargetParser:
@@ -10,8 +10,8 @@ class TestTargetParser:
 
     def test_parse_hostname(self) -> None:
         parser = TargetParser()
-        result = parser.parse("scanme.nmapy.org")
-        assert result == ["scanme.nmapy.org"]
+        result = parser.parse("scanme.xnmapy.org")
+        assert result == ["scanme.xnmapy.org"]
 
     def test_parse_cidr(self) -> None:
         parser = TargetParser()
@@ -187,12 +187,12 @@ class TestNmapScanEdgeCases:
 
 
 def test_version_attribute() -> None:
-    from nmapy import __version__
+    from xnmapy import __version__
 
     assert __version__ == "0.1.0"
 
 
-def test_import_nmapy() -> None:
-    import nmapy
+def test_import_xnmapy() -> None:
+    import xnmapy
 
-    assert nmapy.__version__ == "0.1.0"
+    assert xnmapy.__version__ == "0.1.0"
